@@ -171,7 +171,7 @@
         .webcam-container h3 { color: var(--neon); font-family: Orbitron; font-size: 0.9rem; margin: 0 0 15px 0; text-transform: uppercase; letter-spacing: 1px; }
         #webcamVideo { width: 100%; max-width: 100%; border-radius: 8px; border: 2px solid #333; background: #000; margin-bottom: 15px; display: block; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); }
         .webcam-controls { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-        .webcam-btn { background: linear-gradient(135deg, var(--neon) 0%, #0015ff 100%); color: #fff; border: 1px solid rgba(0, 21, 255, 0.3); padding: 12px 20px; border-radius: 8px; font-weight: 700; cursor: pointer; text-transform: uppercase; font-size: 0.8rem; transition: var(--transition); box-shadow: 0 0 12px rgba(0, 21, 255, 0.35), 0 0 22px rgba(0, 21, 255, 0.2); }
+        .webcam-btn { background: linear-gradient(135deg, var(--neon) 0%, hsl(235, 100%, 50%) 100%); color: #fff; border: 1px solid rgba(0, 21, 255, 0.3); padding: 12px 20px; border-radius: 8px; font-weight: 700; cursor: pointer; text-transform: uppercase; font-size: 0.8rem; transition: var(--transition); box-shadow: 0 0 12px rgba(0, 21, 255, 0.35), 0 0 22px rgba(0, 21, 255, 0.2); }
         .webcam-btn:hover { transform: translateY(-3px); box-shadow: 0 0 16px rgba(0, 21, 255, 0.45), 0 8px 24px rgba(0, 21, 255, 0.45); }
         .webcam-btn.secondary { background: linear-gradient(135deg, #333 0%, #444 100%); color: var(--neon); }
         .webcam-btn.secondary:hover { background: linear-gradient(135deg, #444 0%, #555 100%); }
@@ -432,7 +432,7 @@
 
 <div class="sidebar">
     <div class="logo">
-        <span class="logo-main"><span class="fit-text">FIT</span><span class="brand-accent">E<span class="brand-x">X</span></span></span>
+        <span class="logo-main"><span class="fit-text">FITE</span><span class="brand-x" style="color: #0004ff;">X</span></span>
     </div>
     <div id="roleBadge" class="role-badge admin">Admin Mode</div>
     <div class="nav-item active" data-sheet="Regular Tracker" onclick="loadTab('Regular Tracker', this)">Regular Tracker</div>
@@ -444,9 +444,9 @@
 
 <div class="main">
     <div class="dashboard-row">
-        <div class="dash-card dash-click" style="border-top-color:#ffffff" onclick="dashboardFilter('Active')"><div class="dash-label">Total Active</div><div id="statPaid" class="dash-val">0</div></div>
-        <div class="dash-card dash-click" style="border-top-color:#a83a4d" onclick="dashboardFilter('ExpiringToday')"><div class="dash-label">Expiring Today</div><div id="statExpToday" class="dash-val">0</div></div>
-        <div class="dash-card dash-click" style="border-top-color:#0015ff" onclick="dashboardFilter('Expired')"><div class="dash-label">Expired</div><div id="statOverdue" class="dash-val">0</div></div>
+        <div class="dash-card dash-click" style="border-top-color:#21c400" onclick="dashboardFilter('Active')"><div class="dash-label">Total Active</div><div id="statPaid" class="dash-val">0</div></div>
+        <div class="dash-card dash-click" style="border-top-color:#f8c008" onclick="dashboardFilter('ExpiringToday')"><div class="dash-label">Expiring Today</div><div id="statExpToday" class="dash-val">0</div></div>
+        <div class="dash-card dash-click" style="border-top-color:#fc0202" onclick="dashboardFilter('Expired')"><div class="dash-label">Expired</div><div id="statOverdue" class="dash-val">0</div></div>
     </div>
 
 
@@ -627,7 +627,7 @@
         style.innerHTML = `.dash-click { cursor: pointer; transition: box-shadow 0.2s, transform 0.2s; } .dash-click:hover { box-shadow: 0 0 20px var(--neon), 0 4px 20px rgba(0,0,0,0.3); transform: scale(1.04); z-index:2; }`;
         document.head.appendChild(style);
     });
-    const API_URL = "https://script.google.com/macros/s/AKfycbxs3TDtr1fi8VvbflnMoZWzrKbuT9Cg2elUOth0sNvFfRcYeJtSyyqxk3qhJQoNnsAxcQ/exec";
+    const API_URL = "https://script.google.com/macros/s/AKfycbzF4S23ZnyCFn9OC2FHOEg5fck-llwFLeIsjiM2Ty0NBrRwL3jFv8NLjYemXEpcboMdTQ/exec";
     let masterData = [], filteredData = [], currentSheet = "Regular Tracker", currentEditRow = null;
     let currentUserRole = 'admin';
     let currentUsername = '';
